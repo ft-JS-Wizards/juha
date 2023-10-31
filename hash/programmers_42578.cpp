@@ -1,32 +1,31 @@
 #include <string>
 #include <vector>
+#include <iostream>
 #include <map>
-#include <algorithm>
+
 
 using namespace std;
 
-bool solution(vector<string> phone_book) {
-    sort(phone_book.begin(), phone_book.end());
+int solution(vector<vector<string>> clothes) {
+	ios::sync_with_stdio(false); cin.tie(NULL);
+    map<string, vector<string> > m;
     
-    int cnt;
-    for (auto it = phone_book.begin(); it < phone_book.end(); it++)
+    string type_name;
+    int answer = 1;
+    
+    for (auto it = clothes.begin(); it != clothes.end(); it++)
     {
-        cnt = 0;
-        for (auto it_2 = it; it_2 < phone_book.end(); it_2++)
+        m[(*it)[1]].push_back((*it)[0]);
+    }
+    for (auto it = m.begin(); it != m.end(); it++)
+    {
+        if (answer)
         {
-            if (!it->compare(0, it->size(), *it_2, 0, it->size()))
-            {
-                if (cnt)
-                {
-                    return false;
-                }
-                cnt++;
-            }
-            else if (it->size() > it_2->size())
-                continue;
-            else
-                break;
+    	    answer *= it->second.size()+1;
         }
     }
-    return true;
+    
+        
+    
+    return answer -1;
 }
