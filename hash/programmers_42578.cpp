@@ -27,5 +27,5 @@ int solution(vector<vector<string>> clothes) {
     
         
     
-    return answer -1;
+    return answer - 1;
 }
