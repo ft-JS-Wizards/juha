@@ -18,8 +18,10 @@ int main()
     int tmp;
     std::cin >> tmp;
     H = new int[tmp];
+    
     std::cin >> tmp;
     W = new int[tmp];
+
     int customerNum;
     for (int i = 0; i < T; i++)
     {
