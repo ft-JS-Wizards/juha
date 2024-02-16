@@ -1,2 +1,0 @@
-# JuHa
-cpp algorithm
