@@ -1,2 +1,2 @@
 all:
-	git subtree pull --prefix algorithm git@github.com:Algorithm-Juice/JuHa.git main
+	git subtree pull --prefix=initRepo git@github.com:contemplation-person/initRepo.git main
